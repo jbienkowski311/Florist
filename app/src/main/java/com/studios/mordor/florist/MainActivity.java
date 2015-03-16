@@ -38,14 +38,14 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = {"Android", "iOS", "Windows", "OS X", "Linux"};
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+        String[] flowersArray = {"Aster", "Chrysanthemum", "Daisy", "Gerbera", "Iris", "Lily", "Orchid", "Rose", "Sunflower", "Tulip"};
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, flowersArray);
         mDrawerList.setAdapter(mAdapter);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(MainActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Not so fast!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Navigation!");
+//                getSupportActionBar().setTitle("Navigation!");
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 

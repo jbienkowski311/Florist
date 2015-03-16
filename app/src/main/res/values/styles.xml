@@ -1,8 +1,19 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+    </style>
+
+    <style name="Theme.Base" parent="AppTheme">
+        <item name="android:colorPrimary" tools:ignore="NewApi">@color/floristPrimaryColor</item>
+        <item name="android:colorPrimaryDark" tools:ignore="NewApi">@color/floristDarkPrimaryColor</item>
+        <item name="android:colorAccent" tools:ignore="NewApi">@color/floristAccentColor</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/floristPrimaryColor</item>
     </style>
 
 </resources>
