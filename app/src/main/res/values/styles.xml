@@ -1,19 +1,21 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
     </style>
 
-    <style name="Theme.Base" parent="AppTheme">
+    <style name="Theme.Base" parent="@style/AppTheme">
         <item name="android:colorPrimary" tools:ignore="NewApi">@color/floristPrimaryColor</item>
         <item name="android:colorPrimaryDark" tools:ignore="NewApi">@color/floristDarkPrimaryColor</item>
         <item name="android:colorAccent" tools:ignore="NewApi">@color/floristAccentColor</item>
+        <item name="android:actionBarStyle" tools:ignore="">@style/CustomActionBarTheme</item>
+        <item name="actionBarStyle">@style/CustomActionBarTheme</item>
     </style>
 
-    <style name="ActionBarStyle" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/floristPrimaryColor</item>
+    <style name="CustomActionBarTheme" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background" tools:ignore="NewApi">@color/floristPrimaryColor</item>
+        <item name="background">@color/floristPrimaryColor</item>
     </style>
 
 </resources>
